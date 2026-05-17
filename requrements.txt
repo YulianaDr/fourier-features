@@ -1,0 +1,6 @@
+joblib==1.4.2
+matplotlib==3.10.1
+numpy==2.2.3
+opencv-python==4.13.0.92
+scikit-learn==1.6.1
+tensorflow==2.21.0

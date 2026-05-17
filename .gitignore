@@ -40,11 +40,6 @@ Thumbs.db
 desktop.ini
 
 data/
-models/
-*.pkl
-*.h5
-*.pb
-*.bin
 
 temp.jpg
 *.tmp

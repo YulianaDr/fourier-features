@@ -1,31 +1,3 @@
-<script src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-<script type="text/x-mathjax-config">
-MathJax.Hub.Config({
-  tex2jax: {
-    inlineMath: [['$','$'], ['\\(','\\)']],
-    displayMath: [['$$','$$'], ['\\[','\\]']]
-  }
-});
-</script>
-
-<style>
-    @media print {
-        img {
-            width: 50% !important;
-            max-width: 450px;
-            height: auto;
-            display: block;
-            margin: 15px auto;
-        }
-        h1, h2, h3 {
-            page-break-after: avoid;
-        }
-        table {
-            page-break-inside: avoid;
-        }
-    }
-</style>
-
 # Вычисление интегральных признаков на изображении на основе преобразования Фурье
 
 ## Общее описание проекта

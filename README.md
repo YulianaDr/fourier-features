@@ -433,14 +433,24 @@ $$
 
 ### 4.1. Архитектура CNN
 
-Использовалась следующая архитектура:
-- Вход: 128×128×1 (серое изображение)
-- Свёрточный слой: 32 фильтра 3×3, ReLU, MaxPooling 2×2
-- Свёрточный слой: 64 фильтра 3×3, ReLU, MaxPooling 2×2
-- Свёрточный слой: 128 фильтров 3×3, ReLU, MaxPooling 2×2
-- Flatten, Dense 128, Dropout 0.5, выходной слой sigmoid
+Для сравнения была сконструирована свёрточная нейронная сеть на базе библиотеки Keras со следующей структурой:
 
-Обучение: оптимизатор Adam, loss binary crossentropy, 10 эпох.
+| Layer (type) | Output Shape | Param # |
+|-------------|--------------|---------|
+| conv2d (Conv2D) | (None, 126, 126, 32) | 320 |
+| max_pooling2d (MaxPooling2D) | (None, 63, 63, 32) | 0 |
+| conv2d_1 (Conv2D) | (None, 61, 61, 64) | 18,496 |
+| max_pooling2d_1 (MaxPooling2D) | (None, 30, 30, 64) | 0 |
+| conv2d_2 (Conv2D) | (None, 28, 28, 128) | 73,856 |
+| max_pooling2d_2 (MaxPooling2D) | (None, 14, 14, 128) | 0 |
+| flatten (Flatten) | (None, 25088) | 0 |
+| dense (Dense) | (None, 128) | 3,211,392 |
+| dropout (Dropout) | (None, 128) | 0 |
+| dense_1 (Dense) | (None, 1) | 129 |
+
+**Total params:** 3,304,193 (12.60 MB)  
+**Trainable params:** 3,304,193 (12.60 MB)  
+**Non-trainable params:** 0 (0.00 B)
 
 <br>
 
